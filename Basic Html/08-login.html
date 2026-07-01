@@ -1,0 +1,58 @@
+<!-- 
+  Purpose: Login/Authentication Page
+  This page provides a login form for users to authenticate and access
+  restricted content or user account areas.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <!-- Page header -->
+    <header>
+        <h1>User Login</h1>
+    </header>
+
+    <!-- Main login section -->
+    <main>
+        <section id="login-section">
+            <!-- Login form -->
+            <form action="/login" method="POST" id="login-form">
+                <!-- Email/Username input -->
+                <label for="username">Email or Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <!-- Password input -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <!-- Remember me checkbox -->
+                <label>
+                    <input type="checkbox" name="remember" id="remember">
+                    Remember me
+                </label>
+
+                <!-- Submit button -->
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Additional links -->
+            <p>
+                Don't have an account? <a href="/signup">Sign up here</a>
+            </p>
+            <p>
+                <a href="/forgot-password">Forgot your password?</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- 
+  Purpose: Error/404 Page
+  This page is displayed when a user tries to access a page that doesn't exist.
+  It should guide users back to valid sections of the website.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+</head>
+<body>
+    <!-- Page header -->
+    <header>
+        <h1>Oops! Page Not Found</h1>
+    </header>
+
+    <!-- Main error section -->
+    <main>
+        <section id="error-section">
+            <!-- Error message -->
+            <h2>404 Error</h2>
+            <p>Sorry, the page you're looking for doesn't exist or has been moved.</p>
+
+            <!-- Helpful navigation links -->
+            <h3>Here are some helpful links:</h3>
+            <ul>
+                <li><a href="/">Go to Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/services">Our Services</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/blog">Read Our Blog</a></li>
+            </ul>
+
+            <!-- Search suggestion -->
+            <h3>Or try searching:</h3>
+            <form action="/search" method="GET">
+                <input type="text" name="q" placeholder="Search our website..." required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

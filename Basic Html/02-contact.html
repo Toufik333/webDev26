@@ -1,0 +1,53 @@
+<!-- 
+  Purpose: Contact Form Page
+  This page contains a form for users to submit contact information
+  and messages to the website owner.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <!-- Page header -->
+    <header>
+        <h1>Contact Us</h1>
+        <p>Get in touch with us today</p>
+    </header>
+
+    <!-- Main contact form section -->
+    <main>
+        <section id="contact-form">
+            <form action="/submit-form" method="POST">
+                <!-- Name input field -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Email input field -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Phone input field -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <!-- Message textarea -->
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <!-- Submit button -->
+                <button type="submit">Send Message</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

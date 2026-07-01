@@ -1,0 +1,69 @@
+<!-- 
+  Purpose: Registration/Sign-up Page
+  This page provides a form for new users to create an account
+  and join the website or application.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Create Account</title>
+</head>
+<body>
+    <!-- Page header -->
+    <header>
+        <h1>Create Your Account</h1>
+        <p>Join us today and get started</p>
+    </header>
+
+    <!-- Main signup section -->
+    <main>
+        <section id="signup-section">
+            <!-- Registration form -->
+            <form action="/signup" method="POST" id="signup-form">
+                <!-- First name input -->
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <!-- Last name input -->
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <!-- Email input -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Password input -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <!-- Confirm password input -->
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <!-- Terms and conditions checkbox -->
+                <label>
+                    <input type="checkbox" name="terms" id="terms" required>
+                    I agree to the <a href="/terms">Terms and Conditions</a>
+                </label>
+
+                <!-- Submit button -->
+                <button type="submit">Create Account</button>
+                <button type="reset">Clear Form</button>
+            </form>
+
+            <!-- Login link -->
+            <p>
+                Already have an account? <a href="/login">Login here</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
