@@ -21,9 +21,11 @@
     <main>
         <section id="login-section">
             <!-- Login form -->
-            <form action="/login" method="POST" id="login-form">
+            <form action="/login" method="POST" id="login-form"> <!-- 
+                 -->
                 <!-- Email/Username input -->
-                <label for="username">Email or Username:</label>
+                <label for="username">Email or Username:</label> <!-- for is username so the input id is username. if for is username and there is no username id, the label won't be associated with the input --> 
+                 
                 <input type="text" id="username" name="username" required>
 
                 <!-- Password input -->
@@ -37,7 +39,8 @@
                 </label>
 
                 <!-- Submit button -->
-                <button type="submit">Login</button>
+                <button type="submit">Login</button> <!-- the submit button is used to submit the form data to the server. when clicked, it sends the form data to the action URL specified in the form tag. -->
+                 
             </form>
 
             <!-- Additional links -->
