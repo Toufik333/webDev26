@@ -1,0 +1,245 @@
+/*
+  Purpose: Typography & Text Styles
+  This file contains styles for text, fonts, font sizes, line heights,
+  and text formatting to ensure consistent typography across the website.
+*/
+
+/* Base typography settings */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: #333;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    color: #222;
+}
+
+h1 {
+    font-size: 2.5em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+}
+
+/* Strong/Bold text */
+strong, b {
+    font-weight: 700;
+    color: #222;
+}
+
+/* Italic text */
+em, i {
+    font-style: italic;
+    color: #555;
+}
+
+/* Small text */
+small {
+    font-size: 0.875em;
+    color: #666;
+}
+
+/* Code styling */
+code {
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+    font-size: 0.9em;
+}
+
+/* Code blocks */
+pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1.5em;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #333;
+}
+
+/* Links text styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #6c63ff;
+}
+
+/* List styling */
+ul, ol {
+    margin-bottom: 1.5em;
+    padding-left: 30px;
+}
+
+ul li, ol li {
+    margin-bottom: 0.5em;
+    line-height: 1.8;
+}
+
+ul ul, ol ol {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+/* Blockquote styling */
+blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 20px;
+    margin-left: 0;
+    margin-bottom: 1.5em;
+    color: #666;
+    font-style: italic;
+}
+
+/* Mark/highlight text */
+mark {
+    background-color: #fff3cd;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+/* Strikethrough text */
+s, strike, del {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Subscript and superscript */
+sub, sup {
+    font-size: 0.85em;
+    vertical-align: baseline;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+/* Text alignment utilities */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Text color utilities */
+.text-primary {
+    color: #007bff;
+}
+
+.text-success {
+    color: #28a745;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.text-warning {
+    color: #ffc107;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.25em;
+    }
+    
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75em;
+    }
+    
+    h2 {
+        font-size: 1.25em;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+    }
+}

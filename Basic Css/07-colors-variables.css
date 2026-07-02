@@ -1,0 +1,195 @@
+/*
+  Purpose: Colors, Theme & CSS Variables
+  This file contains color definitions, CSS custom properties (variables),
+  and theme settings for consistent color usage across the website.
+*/
+
+/* CSS Custom Properties (CSS Variables) */
+:root {
+    /* Primary Colors */
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --primary-light: #0d6efd;
+    
+    /* Secondary Colors */
+    --secondary-color: #6c757d;
+    --secondary-dark: #5a6268;
+    --secondary-light: #8a92a2;
+    
+    /* Success/Positive Color */
+    --success-color: #28a745;
+    --success-dark: #1e7e34;
+    --success-light: #6c757d;
+    
+    /* Danger/Error Color */
+    --danger-color: #dc3545;
+    --danger-dark: #bd2130;
+    --danger-light: #f8d7da;
+    
+    /* Warning Color */
+    --warning-color: #ffc107;
+    --warning-dark: #e0a800;
+    --warning-light: #fff3cd;
+    
+    /* Info Color */
+    --info-color: #17a2b8;
+    --info-dark: #138496;
+    --info-light: #d1ecf1;
+    
+    /* Neutral Colors */
+    --white: #ffffff;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --black: #000000;
+    
+    /* Text Colors */
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --text-light: #cccccc;
+    
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f4f4;
+    --bg-light: #fafafa;
+    
+    /* Border Colors */
+    --border-color: #dddddd;
+    --border-light: #eeeeee;
+    --border-dark: #cccccc;
+    
+    /* Shadow */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+    --spacing-2xl: 40px;
+    
+    /* Border Radius */
+    --border-radius-sm: 3px;
+    --border-radius-md: 4px;
+    --border-radius-lg: 8px;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Dark mode variables (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #e8e8e8;
+        --text-secondary: #b0b0b0;
+        --bg-primary: #1e1e1e;
+        --bg-secondary: #2d2d2d;
+        --bg-light: #3a3a3a;
+        --border-color: #444444;
+    }
+}
+
+/* Color utility classes */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+.bg-success {
+    background-color: var(--success-color);
+}
+
+.bg-danger {
+    background-color: var(--danger-color);
+}
+
+.bg-warning {
+    background-color: var(--warning-color);
+}
+
+.bg-info {
+    background-color: var(--info-color);
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.bg-dark {
+    background-color: var(--gray-800);
+}
+
+/* Text color utilities */
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-success {
+    color: var(--success-color);
+}
+
+.text-danger {
+    color: var(--danger-color);
+}
+
+.text-warning {
+    color: var(--warning-color);
+}
+
+.text-info {
+    color: var(--info-color);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+/* Border color utilities */
+.border-primary {
+    border-color: var(--primary-color);
+}
+
+.border-secondary {
+    border-color: var(--secondary-color);
+}
+
+.border-danger {
+    border-color: var(--danger-color);
+}
+
+.border-success {
+    border-color: var(--success-color);
+}
+
+/* Margin utilities using variables */
+.m-xs { margin: var(--spacing-xs); }
+.m-sm { margin: var(--spacing-sm); }
+.m-md { margin: var(--spacing-md); }
+.m-lg { margin: var(--spacing-lg); }
+.m-xl { margin: var(--spacing-xl); }
+
+/* Padding utilities using variables */
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }

@@ -1,0 +1,109 @@
+/*
+  Purpose: Layout & Grid Styles
+  This file contains styles for page layout, flexbox, and grid layouts
+  to structure the website content effectively.
+*/
+
+/* Container for max-width layouts */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Flexbox utility class for row layout */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Flexbox utility class for column layout */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Flexbox centering utilities */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flexbox space-between utility */
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Grid layout for responsive design */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* 2-column grid */
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3-column grid */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 4-column grid */
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Main page structure */
+header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    min-height: calc(100vh - 200px);
+    padding: 40px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* Responsive design media queries for grids */
+@media (max-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .flex-row {
+        flex-direction: column;
+    }
+}

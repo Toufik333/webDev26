@@ -1,0 +1,270 @@
+/*
+  Purpose: Responsive Design & Media Queries
+  This file contains media queries and responsive design patterns
+  to ensure the website works well on all screen sizes.
+*/
+
+/* Base mobile-first approach - styles for mobile devices */
+
+/* Tablet screens (768px and up) */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 0 30px;
+    }
+    
+    /* Show tablet navigation */
+    .nav-mobile {
+        display: none;
+    }
+    
+    .nav-desktop {
+        display: flex;
+    }
+}
+
+/* Medium screens (992px and up) */
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+        padding: 0 40px;
+    }
+    
+    /* Adjust spacing for larger screens */
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+}
+
+/* Large screens (1200px and up) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Extra large screens (1400px and up) */
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Small screens (480px and down) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Stack navigation vertically */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Hide desktop elements on mobile */
+    .hide-mobile {
+        display: none;
+    }
+    
+    /* Stack columns on mobile */
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Adjust form layout on mobile */
+    form {
+        max-width: 100%;
+    }
+    
+    /* Full width buttons on mobile */
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+    }
+    
+    /* Adjust headings for small screens */
+    h1 { font-size: 1.75em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.25em; }
+    h4 { font-size: 1.1em; }
+}
+
+/* Medium screens (480px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Show mobile navigation */
+    .show-mobile {
+        display: block;
+    }
+    
+    /* Adjust grid for tablets */
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Landscape orientation for mobile devices */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 10px 0;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    main {
+        min-height: auto;
+        padding: 20px 0;
+    }
+}
+
+/* High resolution displays (Retina, 2x pixel ratio) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Can add higher quality images or adjust sizes here */
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    button,
+    a {
+        padding: 15px;
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Remove hover effects and replace with active states */
+    button:active,
+    a:active {
+        opacity: 0.8;
+    }
+}
+
+/* Print styles */
+@media print {
+    /* Hide elements that shouldn't be printed */
+    nav,
+    button,
+    .no-print {
+        display: none;
+    }
+    
+    /* Adjust colors for print */
+    body {
+        color: #000;
+        background-color: #fff;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    /* Add page breaks */
+    article {
+        page-break-inside: avoid;
+    }
+}
+
+/* Dark mode preferences */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #e8e8e8;
+    }
+    
+    header {
+        background-color: #2d2d2d;
+        border-bottom-color: #444;
+    }
+    
+    .card {
+        background-color: #2d2d2d;
+        border-color: #444;
+    }
+    
+    input,
+    textarea,
+    select {
+        background-color: #3a3a3a;
+        color: #e8e8e8;
+        border-color: #555;
+    }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+    button {
+        border: 2px solid currentColor;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Utility classes for responsive hiding/showing */
+.hide-on-mobile {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .hide-on-mobile {
+        display: block;
+    }
+    
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+.hide-on-tablet {
+    display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
+.hide-on-desktop {
+    display: block;
+}
+
+@media screen and (min-width: 992px) {
+    .hide-on-desktop {
+        display: none;
+    }
+}

@@ -1,0 +1,150 @@
+/*
+  Purpose: Forms & Buttons Styles
+  This file contains styles for form elements, input fields, buttons,
+  and other interactive form components.
+*/
+
+/* Form container */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+}
+
+/* Form labels */
+label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+/* Input focus states */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Textarea specific styling */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+/* Checkbox and radio styling */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Checkbox and radio label */
+label input[type="checkbox"],
+label input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Button styling */
+button,
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Primary button */
+button,
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset button */
+input[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+    margin-left: 10px;
+}
+
+input[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+/* Disabled state */
+button:disabled,
+input[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Error message styling */
+.error {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: -5px;
+}
+
+/* Success message styling */
+.success {
+    color: #28a745;
+    font-size: 0.9em;
+    margin-top: -5px;
+}
+
+/* Input error state */
+input.error,
+textarea.error,
+select.error {
+    border-color: #dc3545;
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
