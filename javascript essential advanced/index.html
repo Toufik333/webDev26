@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Essential Advanced - Interactive Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .intro p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .topic-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .topic-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .topic-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .topic-card h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #764ba2;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .topic-card p {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .topic-card button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .topic-card button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .output-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            min-height: 50px;
+        }
+
+        .output-section h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .code {
+            background: #f5f5f5;
+            border-left: 3px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        .output {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            margin: 5px 10px;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .info {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 JavaScript Essential Advanced</h1>
+            <p>Master advanced concepts and patterns for professional JavaScript development</p>
+        </header>
+
+        <main>
+            <div class="intro">
+                <p>
+                    <strong>Welcome to Advanced JavaScript!</strong> This learning hub covers essential advanced concepts 
+                    that every professional JavaScript developer should know. Click the "Run Example" button on each topic 
+                    to see live demonstrations. These skills will help you write more efficient, maintainable, and scalable code.
+                </p>
+            </div>
+
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3>Closures & Scope</h3>
+                    <p>Understand lexical scope, closures, and how variables are captured and retained in memory.</p>
+                    <button onclick="runClosure()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Prototypes & Inheritance</h3>
+                    <p>Learn prototype-based inheritance, the prototype chain, and object creation patterns.</p>
+                    <button onclick="runPrototypes()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>ES6 Classes</h3>
+                    <p>Explore modern class syntax, constructors, methods, and inheritance patterns.</p>
+                    <button onclick="runClasses()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Destructuring & Spread</h3>
+                    <p>Master destructuring assignments and spread operators for cleaner code.</p>
+                    <button onclick="runDestructuring()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Higher-Order Functions</h3>
+                    <p>Learn functions that operate on other functions for powerful abstractions.</p>
+                    <button onclick="runHigherOrder()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Decorators & Meta</h3>
+                    <p>Explore decorators, meta-programming, and Proxy objects for advanced patterns.</p>
+                    <button onclick="runDecorators()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Error Handling</h3>
+                    <p>Master error handling, custom errors, try/catch, and error recovery strategies.</p>
+                    <button onclick="runErrorHandling()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Regular Expressions</h3>
+                    <p>Learn regex patterns, matching, validation, and string manipulation techniques.</p>
+                    <button onclick="runRegex()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Generators & Iterators</h3>
+                    <p>Understand generators, iterators, and lazy evaluation patterns.</p>
+                    <button onclick="runGenerators()">Run Example</button>
+                </div>
+
+                <div class="topic-card">
+                    <h3>Modules & Imports</h3>
+                    <p>Master ES6 modules, imports, exports, and module patterns.</p>
+                    <button onclick="runModules()">Run Example</button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <h4>💻 Output Console</h4>
+                <div id="output" class="output">Output will appear here when you run an example...</div>
+            </div>
+
+            <div class="footer-links">
+                <p style="color: #999; font-size: 0.9em; margin-bottom: 10px;">
+                    Open browser Developer Tools (F12) → Console tab to see additional logs
+                </p>
+                <a href="#closure-output">Closures</a>
+                <a href="#prototypes-output">Prototypes</a>
+                <a href="#classes-output">Classes</a>
+                <a href="#destructuring-output">Destructuring</a>
+                <a href="#higher-order-output">Higher-Order</a>
+                <a href="#decorators-output">Decorators</a>
+                <a href="#error-output">Error Handling</a>
+                <a href="#regex-output">RegExp</a>
+                <a href="#generators-output">Generators</a>
+                <a href="#modules-output">Modules</a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Placeholder function definitions that will be overridden by external files -->
+    <script>
+        function runClosure() { alert('Loading...'); }
+        function runPrototypes() { alert('Loading...'); }
+        function runClasses() { alert('Loading...'); }
+        function runDestructuring() { alert('Loading...'); }
+        function runHigherOrder() { alert('Loading...'); }
+        function runDecorators() { alert('Loading...'); }
+        function runErrorHandling() { alert('Loading...'); }
+        function runRegex() { alert('Loading...'); }
+        function runGenerators() { alert('Loading...'); }
+        function runModules() { alert('Loading...'); }
+    </script>
+
+    <!-- Include all advanced JavaScript files -->
+    <script src="01-closures-scope.js"></script>
+    <script src="02-prototypes-inheritance.js"></script>
+    <script src="03-classes.js"></script>
+    <script src="04-destructuring-spread.js"></script>
+    <script src="05-higher-order-functions.js"></script>
+    <script src="06-decorators-meta.js"></script>
+    <script src="07-error-handling.js"></script>
+    <script src="08-regex.js"></script>
+    <script src="09-generators-iterators.js"></script>
+    <script src="10-modules.js"></script>
+</body>
+</html>
