@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#0f172a",
+              sand: "#f8fafc",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <main class="mx-auto flex min-h-screen max-w-4xl items-center px-6 py-16">
+      <section class="w-full rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-cyan-950/20 backdrop-blur">
+        <p class="mb-4 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-300">
+          Tailwind CSS practice space
+        </p>
+        <h1 class="max-w-2xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          Learn utilities by building fast, expressive layouts.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+          Use this folder to experiment with spacing, layout, color, typography, and responsive classes.
+          The starter files below are ready for the CLI workflow too.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="rounded-full bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950">Spacing</span>
+          <span class="rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200">Layout</span>
+          <span class="rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200">Responsive</span>
+          <span class="rounded-full bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200">Components</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
