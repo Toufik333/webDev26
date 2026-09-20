@@ -1,16 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <link rel="shortcut icon" href="./images/fav-icon.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoctorCare | HTML, Tailwind CSS, JavaScript Landing Page</title>
+
+        <!-- gogle fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+          rel="stylesheet"
+        />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
-    
-    
-    <title>Document</title>
-</head>
-<body>
-    
+
+    <!-- Tailwind configuration must load after Tailwind creates its global object -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#00856F",
+              "green-light": "#DCE9E2",
+              "green-light-02": "#F7F9F9",
+              "brand-beige": "#FFFAF1",
+              "brand-green-hover": "#00453A",
+              "secondary": "#495057",
+
+            },
+            fontFamily: {
+              primary: ["DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .active {
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- custom css -->
+     <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  </head>
+<body class="bg-green-light">
+    <header>
+        <nav class="container mx-auto max-w-screen-xl flex justify-between items-center py-4">
+            <div class="text-xl font-bold">
+                <a href="/" class="text-black">Doctor <span class="text-primary">Care</span></a>
+            </div>
+
+            <ul class="flex gap-6 text-secondary font-medium">
+                <li><a href="#home" class="hover:text-primary">Home</a></li>
+                <li><a href="#about" class="hover:text-primary">About</a></li>
+                <li><a href="#services" class="hover:text-primary">Services</a></li>
+                <li><a href="#contact" class="hover:text-primary">Contact</a></li>
+            </ul>
+
+            <div>
+                <a href="#contact" class="bg-transparent text-primary border border-primary px-4 py-2 rounded-full hover:bg-brand-green-hover hover:text-white">Agendar Cita</a>
+            </div>
+
+
+        </nav>
+    </header>
+
+    <div class="container max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center bg-green-light" id="home">
+        <div class="w-full md:w-2/3 text-center sm:text-left mb-8 hero-content">
+            <p class="text-md font-bold text-primary mb-4">BOAS-VINDAS A DOCTORCARE 👋 </p>
+            <h1 class="text-4xl md:text-5xl font-bold text-black mb-6">Profesionales altamente capacitados está comprometido con tu bienestar y salud integral.</h1>
+            <p class="text-lg text-secondary mb-6">akjksd padofowd asfmgn alfaspr adfjlkj asd q padjfj paf  jajflkkja fakjquxcnv lznnhof valq ap av pqj pasdfpo jdsa paosjdfp</p>
+            <div class="text-center">
+            <button
+              class="bg-primary text-white px-6 py-3 rounded-full text-lg hover:bg-brand-green-hover flex w-full sm:w-72 items-center justify-center gap-1"
+            >
+              <i class="ri-whatsapp-line"></i>
+              <a href="#contact">Agende sua consulta</a>
+            </button>
+          </div>
+        </div>
+        <div>
+            <img src="./images/hero-banner.png" alt="Doctor Care Hero Image" />
+        </div>
+    </div>
+
+    <section class="md:h-52 max-w-7xl container mx-auto sm:-mt-28 mt-2 bg-brand-beige rounded-lg shadow-lg stats-section">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center py-8">
+            <div class="border-r border-gray-300">
+                <div class="flex flex-col items-center justify-center">
+                    <p class="text-2xl font-bold text-primary">+3.500</p>
+                    <p class="text-sm text-secondary">Pacientes atendidos</p>
+                </div>
+            </div>
+            <div class="border-r border-gray-300">
+                <div class="flex flex-col items-center justify-center">
+                    <p class="text-2xl font-bold text-primary">+15</p>
+                    <p class="text-sm text-secondary">Especialistas disponíveis</p>
+                </div>
+            </div>
+            <div class="border-l border-gray-300">
+                <div class="flex flex-col items-center justify-center">
+                    <p class="text-2xl font-bold text-primary">+10</p>
+                    <p class="text-sm text-secondary">Anos no mercado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </body>
 </html>
